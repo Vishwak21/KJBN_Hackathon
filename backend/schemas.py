@@ -3,7 +3,7 @@ from pydantic import BaseModel, ConfigDict, Field, StringConstraints
 
 Text = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=120)]
 Number = Annotated[str, StringConstraints(min_length=1, max_length=32)]
-Identifier = Annotated[int, Field(strict=True, gt=0)]
+Identifier = Annotated[int, Field(strict=True, gt=0, le=2147483647)]
 
 
 class Input(BaseModel):

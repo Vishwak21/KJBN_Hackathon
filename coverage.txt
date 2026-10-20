@@ -1,0 +1,12 @@
+Name                        Stmts   Miss  Cover   Missing
+---------------------------------------------------------
+backend\__init__.py             0      0   100%
+backend\api.py                152      2    99%   330-332
+backend\browser_server.py      11     11     0%   3-14
+backend\db.py                  26      0   100%
+backend\rules.py               48      0   100%
+backend\schemas.py             40      0   100%
+backend\seed.py                28      2    93%   95-96
+backend\services.py           126      0   100%
+---------------------------------------------------------
+TOTAL                         431     15    97%

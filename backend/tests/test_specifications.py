@@ -1,4 +1,5 @@
 """M1 executable contract for the required persistence model."""
+
 from backend.db import migrate, transaction
 
 

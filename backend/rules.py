@@ -1,4 +1,5 @@
 """Pure pricing and payout arithmetic. No HTTP or database dependencies."""
+
 from datetime import date, timedelta
 from decimal import Decimal, ROUND_DOWN, ROUND_HALF_UP
 
@@ -24,7 +25,10 @@ def decimal_value(value, label, places=2, positive=True):
             raise ValueError()
         return number
     except (ValueError, ArithmeticError):
-        raise DomainError("invalid_number", f"{label} must be finite, positive and have at most {places} decimal places.") from None
+        raise DomainError(
+            "invalid_number",
+            f"{label} must be finite, positive and have at most {places} decimal places.",
+        ) from None
 
 
 def money(value):
@@ -41,15 +45,21 @@ def breakdown(weight, moisture, threshold, maximum, price, price_id):
     threshold, maximum = Decimal(threshold), Decimal(maximum)
     if moisture > maximum:
         raise DomainError("moisture_rejected", f"Moisture exceeds maximum accepted ({maximum}%).")
-    deduction_pct = min(Decimal(10), max(Decimal(0), (moisture - threshold).to_integral_value(rounding=ROUND_DOWN)))
+    deduction_pct = min(
+        Decimal(10), max(Decimal(0), (moisture - threshold).to_integral_value(rounding=ROUND_DOWN))
+    )
     # Keep exact kg through multiplication; only payable money is rounded.
     deduction_kg = weight * deduction_pct / 100
     net_kg = weight - deduction_kg
     return {
-        "gross_kg": str(weight), "moisture": str(moisture),
-        "deduction_pct": str(deduction_pct), "deduction_kg": str(deduction_kg),
-        "net_kg": str(net_kg), "applied_price": str(price),
-        "price_id": price_id, "amount": str(money(net_kg * Decimal(price))),
+        "gross_kg": str(weight),
+        "moisture": str(moisture),
+        "deduction_pct": str(deduction_pct),
+        "deduction_kg": str(deduction_kg),
+        "net_kg": str(net_kg),
+        "applied_price": str(price),
+        "price_id": price_id,
+        "amount": str(money(net_kg * Decimal(price))),
     }
 
 
@@ -57,8 +67,11 @@ def payout_totals(amounts, outstanding):
     gross = sum((Decimal(a) for a in amounts), Decimal(0))
     cap = max(Decimal(0), gross * Decimal("0.30")).quantize(CENT, rounding=ROUND_DOWN)
     deduction = min(Decimal(outstanding), cap)
-    return {"gross": str(money(gross)), "deduction": str(money(deduction)),
-            "net": str(money(gross - deduction))}
+    return {
+        "gross": str(money(gross)),
+        "deduction": str(money(deduction)),
+        "net": str(money(gross - deduction)),
+    }
 
 
 def business_date(value, today):
