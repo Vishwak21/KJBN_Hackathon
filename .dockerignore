@@ -1,0 +1,11 @@
+.git
+.venv
+.env
+**/node_modules
+**/__pycache__
+**/test-results
+**/dist
+data
+.coverage
+htmlcov
+deployment-bundle.zip

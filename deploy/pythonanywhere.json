@@ -1,0 +1,7 @@
+{
+  "domain_name": "USERNAME.pythonanywhere.com",
+  "enabled": true,
+  "webapp": {
+    "command": "/bin/bash /home/USERNAME/harvest-ledger/scripts/pythonanywhere-start.sh"
+  }
+}
