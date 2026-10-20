@@ -23,7 +23,7 @@ def test_moisture_boundaries(moisture, deduction):
 
 
 def test_half_up():
-    assert breakdown("1", "14", "14", "28", "1.005", 1)["amount"] == "1.01"
+    assert breakdown("0.5", "14", "14", "28", "2.01", 1)["amount"] == "1.01"
 
 
 @pytest.mark.parametrize("value", ["0", "-1", "NaN", "Infinity", "1.001", True, "1000000001", "x"])
