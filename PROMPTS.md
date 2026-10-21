@@ -43,3 +43,31 @@ Verbatim user prompt:
 > [https://github.com/Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon)
 
 Use: treated the supplied repository as the destination for publishing the implementation and preserving its existing milestone commits.
+
+## 7 - 2026-10-21 - Codex
+
+Verbatim user prompt:
+> means?
+
+Use: explained the difference between source-code storage and live application hosting.
+
+## 8 - 2026-10-21 - Codex
+
+Verbatim user prompt:
+> i dont have hosting acc
+
+Use: checked official PythonAnywhere documentation and guided free-account signup.
+
+## 9 - 2026-10-21 - Codex
+
+Verbatim user prompt:
+> username is Vishwak
+
+Use: prepared account-specific deployment commands without requesting a password.
+
+## 10 - 2026-10-21 - Codex
+
+Verbatim user prompt:
+> [https://www.pythonanywhere.com/user/Vishwak/](https://www.pythonanywhere.com/user/Vishwak/)
+
+Use: prepared the upload bundle and guided deployment through the user's authenticated dashboard; no account access was implied by the link.
