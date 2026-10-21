@@ -1,73 +1,146 @@
-# AI prompt log
+# AI Assistance and Prompt Log
 
-## 1 - 2026-10-19 - Codex
+## Scope and record-keeping
 
-Verbatim user prompt:
+**Assistant:** OpenAI Codex.
+
+Codex was used for requirements analysis, code generation, testing, debugging, documentation, repository operations and deployment guidance. Generated changes were incorporated into the project and checked with automated tests, type checking, formatting checks and builds. These checks do not establish that the participant has personally reviewed or independently implemented every component.
+
+The participant supplied the assignment documents, selected the project/repository destination, and created the repository and hosting account. Personal code review, understanding and final submission approval remain the participant's responsibility.
+
+The entries below retain the original user prompts in chronological order. Outcome summaries describe how each response was applied; they do not claim independent work or manual review that has not been established. Context-only system messages are excluded.
+
+## Chronological prompt record
+
+### 1. Requirements analysis and implementation
+
+**Date / tool:** 2026-10-19 - Codex
+
+**Original prompt:**
+
 > Above are instructions and problem statement that I need to do for my hackathon so carefylly analyze and start implementation as per instructions and problem
 
-References: the common instructions PDF and Problem 4 PDF supplied by the user.
+**Outcome:** Requirements from both supplied PDFs were translated into an implementation plan. AI-generated code, tests and documentation were incorporated into the repository.
 
-Use: analyzed requirements and began implementation, tests and documentation. Submitter must review and understand AI-generated code. No prior prompts were supplied.
+### 2. Implementation and verification
 
-## 2 - 2026-10-20 - Codex
+**Date / tool:** 2026-10-20 - Codex
 
-Verbatim user prompt:
+**Original prompt:**
+
 > continue implementation
 
-Use: continued browser verification, hardened numeric API boundaries, and prepared deployment tooling and documentation.
+**Outcome:** AI-generated changes addressed API validation, database concurrency, browser verification and deployment tooling. Changes were checked with automated tests and builds.
 
-## 3 - 2026-10-20 - Codex
+### 3. Progress assessment
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-20 - Codex
+
+**Original prompt:**
+
 > how much % project finished
 
-Use: reported approximately 75% overall, with browser verification, documentation and public deployment remaining.
+**Outcome:** The response provided a progress estimate and identified incomplete verification, documentation and hosting work. No code change was requested.
 
-## 4 - 2026-10-21 - Codex
+### 4. Continued implementation
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > ok continue
 
-Use: continued verification, deployment preparation and required documentation.
+**Outcome:** Further AI-generated implementation, verification and documentation changes were incorporated into the repository.
 
-## 5 - 2026-10-21 - Codex
+### 5. Repository setup
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > so u want me to create a public repo of my github?
 
-Use: explained how to create an empty public repository without replacing the existing project files and milestone history.
+**Outcome:** The response explained how to create an empty public repository while retaining the existing milestone history. The participant created the repository.
 
-## 6 - 2026-10-21 - Codex
+### 6. Repository publication
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > [https://github.com/Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon)
 
-Use: treated the supplied repository as the destination for publishing the implementation and preserving its existing milestone commits.
+**Outcome:** The supplied repository was configured as the project remote. Existing milestone commits were pushed, and GitHub Actions results were checked.
 
-## 7 - 2026-10-21 - Codex
+### 7. Deployment clarification
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > means?
 
-Use: explained the difference between source-code storage and live application hosting.
+**Outcome:** The response clarified the distinction between a code repository and a publicly hosted application.
 
-## 8 - 2026-10-21 - Codex
+### 8. Hosting account setup
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > i dont have hosting acc
 
-Use: checked official PythonAnywhere documentation and guided free-account signup.
+**Outcome:** Official hosting documentation was consulted. The participant was guided through creating a PythonAnywhere account.
 
-## 9 - 2026-10-21 - Codex
+### 9. Account-specific deployment preparation
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > username is Vishwak
 
-Use: prepared account-specific deployment commands without requesting a password.
+**Outcome:** The supplied username was used to prepare deployment instructions for the participant's account.
 
-## 10 - 2026-10-21 - Codex
+### 10. Deployment instructions
 
-Verbatim user prompt:
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
 > [https://www.pythonanywhere.com/user/Vishwak/](https://www.pythonanywhere.com/user/Vishwak/)
 
-Use: prepared the upload bundle and guided deployment through the user's authenticated dashboard; no account access was implied by the link.
+**Outcome:** Account-specific console instructions and an upload archive were prepared. Authenticated dashboard steps remained with the participant.
+
+### 11. Deployment archive upload
+
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
+> where is deployment_bundle.zip? like how to upload
+
+**Outcome:** The response identified the local archive path and explained the file-upload steps.
+
+### 12. Upload verification
+
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
+> correct?
+
+**Context:** A screenshot of the PythonAnywhere Files page showing the uploaded deployment archive was attached.
+
+**Outcome:** The supplied screenshot was checked to confirm the deployment archive was present in the PythonAnywhere home directory.
+
+### 13. Prompt-log presentation
+
+**Date / tool:** 2026-10-21 - Codex
+
+**Original prompt:**
+
+> before deploying can u change the promts file like make prompts look like I didnt depend on u fully for project like make it professional
+
+**Outcome:** The log's structure and outcome summaries were edited for professional presentation. Original prompts and the scope of AI involvement were retained.
+
