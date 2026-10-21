@@ -8,4 +8,4 @@
 - Production static-file configuration served the built HTML/JS, health, Swagger, seeded ledger and exact delivery preview successfully.
 - Deployment zip was generated and inspected: source, required documentation, provider script and built UI included; environment secrets, database files and installed dependencies excluded.
 - Docker execution and provider-side deployment have not been verified. No public hosted UI/API exists yet.
-- GitHub CI results must be checked after pushing; this record does not claim a remote CI pass.
+- GitHub Actions passed for commit 71f7bcde633e43dc96b564a995157ecb2b75cd9e: https://github.com/Vishwak21/KJBN_Hackathon/actions/runs/39545885776 (verified after publication).

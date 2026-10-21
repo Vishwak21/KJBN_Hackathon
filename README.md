@@ -4,7 +4,7 @@
 
 ## 2. Live links
 
-Repository: [Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon). Public UI and API URLs are **pending deployment**. There are no test credentials: authentication is intentionally omitted for this invented-data demo. Do not submit this README as a completed hosted assignment yet.
+Repository: [Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon). [Verified CI run](https://github.com/Vishwak21/KJBN_Hackathon/actions/runs/39545885776). Public UI and API URLs are **pending deployment**. There are no test credentials: authentication is intentionally omitted for this invented-data demo. Do not submit this README as a completed hosted assignment yet.
 
 Local development: UI `http://localhost:5173`, API `http://localhost:8000`, Swagger `http://localhost:8000/docs`. Docker: UI `http://localhost:8080`.
 
@@ -227,7 +227,7 @@ Use `docs/reviewer-checklist.md` to verify all PDF edge cases. Re-seed instructi
 
 ## 11. Known limitations
 
-- Hosted URLs are still pending. M5 hosting, hosted edge-case review, successful remote CI, final documentation sign-off and the `v1.0` tag remain pending.
+- Hosted URLs are still pending. M5 hosting, hosted edge-case review, final documentation sign-off and the `v1.0` tag remain pending.
 - Provider ASGI configuration is prepared from official documentation but has not been exercised on an account. Docker is not available in the development environment, so container startup has not been verified.
 - Authentication, multi-centre support, printable PDF statements and quality bonuses are omitted. All mandatory calculation flows are prioritised.
 - SQLite is appropriate for one small buying centre; it serialises writes and does not support horizontally distributed writers. There is no automatic backup/restore workflow.

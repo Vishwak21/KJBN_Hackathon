@@ -4,7 +4,7 @@ Harvest Ledger implements Problem 4, Produce Procurement & Payout, with a JSON A
 Core flows include farmers/crops, effective-price history, advances, delivery preview/save/edit, linked corrections, weekly payout generation/finalisation/payment and farmer ledgers.
 The UI shows the weight-to-money calculation and statement arithmetic using the API.
 Backend boundary/concurrency tests and the delivery-to-payment browser workflow pass.
-Public hosting, remote CI evidence, the final tag and submitter review of this AI-assisted draft remain pending.
+Public hosting, the final tag and submitter review of this AI-assisted draft remain pending.
 
 ## B. Three design decisions
 
@@ -45,7 +45,7 @@ Dates are IST. M5/M6 are deliberately not marked complete.
 
 ## F. If I had two more days
 
-1. Publish, run remote CI and replay every hosted reviewer edge case: these are outstanding submission requirements.
+1. Publish and replay every hosted reviewer edge case: these are outstanding submission requirements.
 2. Add and exercise database backup/restore before any real financial use.
 3. Add idempotency keys to money-changing creation endpoints to make network retries safe.
 4. Generate typed frontend contracts from OpenAPI and split the largest screen components.
@@ -65,6 +65,6 @@ Provisional evidence-based scores; the submitter must review and calibrate them 
 | API design | 4 | Resource routes, pagination and OpenAPI; no idempotency keys |
 | UI usability | 4 | Core browser flow and phone layout pass; broader usability untested |
 | Testing | 4 | 57 backend tests, business modules 100% line coverage; branch coverage unmeasured |
-| Deployment and operability | 2 | Scripts/CI prepared; public hosting and Docker execution pending |
+| Deployment and operability | 2 | Build/test CI passes; public hosting and Docker execution pending |
 | Git hygiene | 3 | Milestone history retained; final tag and complete deployment milestones pending |
 | Documentation and write-up | 3 | Required structures present; live links and personal review pending |
