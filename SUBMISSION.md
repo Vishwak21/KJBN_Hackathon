@@ -41,7 +41,7 @@ Dates are IST. M5/M6 are deliberately not marked complete.
 | M3 - API | 2026-10-19; hardening 2026-10-21 | `d8fdcf7`, `6570207` |
 | M4 - UI | 2026-10-21 | `e249e85` |
 | M5 - Deployment | Pending public hosting; tooling prepared | `ea51b73` (partial) |
-| M6 - Documentation | Pending submitter sign-off and final tag | Pending |
+| M6 - Documentation | Pending submitter sign-off and final tag | `dd33c2c` (draft) |
 
 ## F. If I had two more days
 
@@ -66,5 +66,5 @@ Provisional evidence-based scores; the submitter must review and calibrate them 
 | UI usability | 4 | Core browser flow and phone layout pass; broader usability untested |
 | Testing | 4 | 57 backend tests, business modules 100% line coverage; branch coverage unmeasured |
 | Deployment and operability | 2 | Scripts/CI prepared; public hosting and Docker execution pending |
-| Git hygiene | 3 | Milestone history retained; public remote and final tag pending |
+| Git hygiene | 3 | Milestone history retained; final tag and complete deployment milestones pending |
 | Documentation and write-up | 3 | Required structures present; live links and personal review pending |

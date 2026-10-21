@@ -4,7 +4,7 @@
 
 ## 2. Live links
 
-Public UI, API and repository URLs are **pending deployment**. There are no test credentials: authentication is intentionally omitted for this invented-data demo. Do not submit this README as a completed hosted assignment yet.
+Repository: [Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon). Public UI and API URLs are **pending deployment**. There are no test credentials: authentication is intentionally omitted for this invented-data demo. Do not submit this README as a completed hosted assignment yet.
 
 Local development: UI `http://localhost:5173`, API `http://localhost:8000`, Swagger `http://localhost:8000/docs`. Docker: UI `http://localhost:8080`.
 
@@ -40,7 +40,7 @@ React forms ── JSON /api ──> FastAPI routes + input schemas
 - `scripts/`: coverage, deployment packaging and provider registration/start commands.
 - `deploy/`: provider-specific configuration.
 - `docs/`: requirement interpretation and reviewer checklist.
-- `.github/`: CI checks on pushes and pull requests; execution on GitHub is pending a remote repository.
+- `.github/`: CI checks on pushes and pull requests; check the repository Actions tab for remote results.
 
 Each request owns its connection. Reads use a deferred transaction; writes use `BEGIN IMMEDIATE`. Write decisions and inserts/updates commit together. SQLite thread affinity is disabled because FastAPI may move a request between worker threads; connections are never shared across requests.
 
@@ -118,7 +118,7 @@ From an activated Python environment:
 python scripts/coverage.py
 ```
 
-This runs all backend unit/API/concurrency tests and writes `coverage.txt` and `coverage.json`. The latest measured backend line coverage is **97% overall**, **100% for rules.py** and **100% for services.py**. Reports include the browser-server launcher, which runs outside pytest. Coverage is line coverage; no branch-coverage claim is made.
+This runs all backend unit/API/concurrency tests and writes `coverage.txt` and `coverage.json`. See [verification evidence](docs/verification.md) for completed local checks. The latest measured backend line coverage is **97% overall**, **100% for rules.py** and **100% for services.py**. Reports include the browser-server launcher, which runs outside pytest. Coverage is line coverage; no branch-coverage claim is made.
 
 Rules tested include effective-price boundaries, fractional moisture, maximum rejection, deduction cap, half-up rounding, invalid numbers/grades/dates, frozen historical deliveries, repeated recovery, draft regeneration, empty weeks, correction restrictions, status transitions, concurrent generation/finalisation and parallel HTTP requests. API tests distinguish malformed requests, missing resources, conflicts, unavailable databases and unexpected errors.
 
@@ -227,7 +227,7 @@ Use `docs/reviewer-checklist.md` to verify all PDF edge cases. Re-seed instructi
 
 ## 11. Known limitations
 
-- No public repository or hosted URLs yet. M5 hosting, hosted edge-case review, CI execution on the remote, final documentation sign-off and the `v1.0` tag remain pending.
+- Hosted URLs are still pending. M5 hosting, hosted edge-case review, successful remote CI, final documentation sign-off and the `v1.0` tag remain pending.
 - Provider ASGI configuration is prepared from official documentation but has not been exercised on an account. Docker is not available in the development environment, so container startup has not been verified.
 - Authentication, multi-centre support, printable PDF statements and quality bonuses are omitted. All mandatory calculation flows are prioritised.
 - SQLite is appropriate for one small buying centre; it serialises writes and does not support horizontally distributed writers. There is no automatic backup/restore workflow.
