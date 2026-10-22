@@ -4,7 +4,7 @@ Harvest Ledger implements Problem 4, Produce Procurement & Payout, with a JSON A
 Core flows include farmers/crops, effective-price history, advances, delivery preview/save/edit, linked corrections, weekly payout generation/finalisation/payment and farmer ledgers.
 The UI shows the weight-to-money calculation and statement arithmetic using the API.
 Backend boundary/concurrency tests and the delivery-to-payment browser workflow pass.
-The application is publicly hosted; the final tag and submitter review of this AI-assisted draft remain pending.
+The application is publicly hosted, and the participant confirmed review of this AI-assisted write-up on 2026-10-22.
 
 ## B. Three design decisions
 
@@ -31,7 +31,7 @@ Server-generated `X-Request-ID` correlates the JSON response with structured log
 
 ## E. Milestone log
 
-Dates are IST. Public deployment is verified; M6 remains pending personal review and the final tag.
+Dates are IST. Public deployment and participant documentation review are recorded; the final submission revision is identified by tag v1.0.
 
 | Milestone | Date completed | Commit hash |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Dates are IST. Public deployment is verified; M6 remains pending personal review
 
 ## G. Self-assessment
 
-Provisional evidence-based scores; the submitter must review and calibrate them before submission.
+Conservative evidence-based scores, following participant review on 2026-10-22; unverified deployment checks remain disclosed.
 
 | Rubric criterion | Score / 5 | Justification |
 | --- | --- | --- |
@@ -66,5 +66,5 @@ Provisional evidence-based scores; the submitter must review and calibrate them 
 | UI usability | 4 | Core browser flow and phone layout pass; broader usability untested |
 | Testing | 4 | 57 backend tests, business modules 100% line coverage; branch coverage unmeasured |
 | Deployment and operability | 2 | CI and hosted read-only checks pass; Docker/restart checks pending |
-| Git hygiene | 3 | Milestone history retained; final tag and complete deployment milestones pending |
-| Documentation and write-up | 3 | Required structures and live links present; personal review pending |
+| Git hygiene | 3 | Milestone history retained; submission revision identified by v1.0 |
+| Documentation and write-up | 3 | Required structures, live links and participant review recorded |

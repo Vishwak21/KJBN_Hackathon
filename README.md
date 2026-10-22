@@ -11,7 +11,7 @@
 - Health: [health endpoint](https://vishwak.pythonanywhere.com/health)
 - [Verified CI run](https://github.com/Vishwak21/KJBN_Hackathon/actions/runs/39545885776)
 
-No login is required for the invented-data demo. Public read-only checks passed on 2026-10-22 (IST). No cold-start delay was measured; availability and account expiry must be monitored throughout the review period. Personal hosted workflow review and final submission sign-off remain pending.
+No login is required for the invented-data demo. Public read-only checks passed on 2026-10-22 (IST). No cold-start delay was measured; availability and account expiry must be monitored throughout the review period. The participant confirmed documentation review on 2026-10-22. Hosted write-workflow evidence, account renewal and restart persistence remain separate verification limits.
 
 Local development: UI `http://localhost:5173`, API `http://localhost:8000`, Swagger `http://localhost:8000/docs`. Docker: UI `http://localhost:8080`.
 
@@ -234,7 +234,7 @@ Use `docs/reviewer-checklist.md` to verify all PDF edge cases. Re-seed instructi
 
 ## 11. Known limitations
 
-- The app is hosted, and read-only hosted boundary checks pass. Personal hosted workflow review, final documentation sign-off and the `v1.0` tag remain pending.
+- The app is hosted, and read-only hosted boundary checks pass. The participant confirmed review on 2026-10-22; the submission revision is identified by the `v1.0` tag. Hosted write-workflow and restart checks remain unverified.
 - PythonAnywhere startup and public responses are verified. Hosted restart persistence, provider log access and review-period renewal still need account-side checks. Docker is not available in the development environment, so container startup has not been verified.
 - Authentication, multi-centre support, printable PDF statements and quality bonuses are omitted. All mandatory calculation flows are prioritised.
 - SQLite is appropriate for one small buying centre; it serialises writes and does not support horizontally distributed writers. There is no automatic backup/restore workflow.
