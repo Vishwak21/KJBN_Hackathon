@@ -40,8 +40,8 @@ Dates are IST. Public deployment and participant documentation review are record
 | M2 - Business rules | 2026-10-19 | `fea7a4b` |
 | M3 - API | 2026-10-19; hardening 2026-10-21 | `d8fdcf7`, `6570207` |
 | M4 - UI | 2026-10-21 | `e249e85` |
-| M5 - Deployment | 2026-10-22 (public verification) | `ea51b73` (scripts); evidence in docs/verification.md |
-| M6 - Documentation | Pending submitter sign-off and final tag | `dd33c2c` (draft) |
+| M5 - Deployment | 2026-10-22 | `10b022b` |
+| M6 - Documentation | 2026-10-22 | `0efea99` |
 
 ## F. If I had two more days
 
