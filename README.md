@@ -4,7 +4,14 @@
 
 ## 2. Live links
 
-Repository: [Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon). [Verified CI run](https://github.com/Vishwak21/KJBN_Hackathon/actions/runs/39545885776). Public UI and API URLs are **pending deployment**. There are no test credentials: authentication is intentionally omitted for this invented-data demo. Do not submit this README as a completed hosted assignment yet.
+- Repository: [Vishwak21/KJBN_Hackathon](https://github.com/Vishwak21/KJBN_Hackathon)
+- Live UI: [Harvest Ledger](https://vishwak.pythonanywhere.com/)
+- API base: [https://vishwak.pythonanywhere.com/api](https://vishwak.pythonanywhere.com/api/farmers)
+- API docs: [Swagger UI](https://vishwak.pythonanywhere.com/docs)
+- Health: [health endpoint](https://vishwak.pythonanywhere.com/health)
+- [Verified CI run](https://github.com/Vishwak21/KJBN_Hackathon/actions/runs/39545885776)
+
+No login is required for the invented-data demo. Public read-only checks passed on 2026-10-22 (IST). No cold-start delay was measured; availability and account expiry must be monitored throughout the review period. Personal hosted workflow review and final submission sign-off remain pending.
 
 Local development: UI `http://localhost:5173`, API `http://localhost:8000`, Swagger `http://localhost:8000/docs`. Docker: UI `http://localhost:8080`.
 
@@ -16,7 +23,7 @@ Local development: UI `http://localhost:5173`, API `http://localhost:8000`, Swag
 | Persistence | SQLite, parameterised SQL, schema committed in `backend/schema.sql` |
 | Frontend | React 19, TypeScript 5.8, Vite 6.4 |
 | Verification | pytest, coverage.py, Ruff, Playwright, Prettier |
-| Hosting | Docker Compose for local operation; prepared PythonAnywhere ASGI deployment, not yet exercised on an account |
+| Hosting | PythonAnywhere ASGI for the live UI/API; Docker Compose for local operation |
 
 All application choices use the recommended technologies. SQLite keeps clean-clone setup small; its single-writer limit is a deliberate tradeoff.
 
@@ -90,9 +97,9 @@ The seed command applies the initial schema and inserts invented farmers, three 
 
 ## 5a. Deployment
 
-**Prepared, not publicly deployed or provider-tested.** Docker is also not installed in the current development environment, so the images/Compose configuration have not been run here.
+**Live on PythonAnywhere:** the participant deployed through the account's Bash console on 2026-10-21. Public HTML, JavaScript/CSS, health, Swagger, OpenAPI, seeded ledger and delivery-preview boundary checks passed on 2026-10-22. Hosted write workflows and restart persistence still need account-side verification. Docker is not installed in the current development environment, so the images/Compose configuration have not been run here.
 
-PythonAnywhere is the prepared free-account path. Its ASGI feature is experimental; verify that the selected account supports it before publishing. Its [ASGI API documentation](https://help.pythonanywhere.com/pages/ASGIAPI/) describes account registration and socket startup. [Free account limits](https://help.pythonanywhere.com/pages/FreeAccountsFeatures/) include disk and app-expiry limits. Do not assume a service will stay available without renewing it for the review period.
+PythonAnywhere is the selected free-account host. Its ASGI feature is experimental; deployment succeeded on the Vishwak account. Its [ASGI API documentation](https://help.pythonanywhere.com/pages/ASGIAPI/) describes account registration and socket startup. [Free account limits](https://help.pythonanywhere.com/pages/FreeAccountsFeatures/) include disk and app-expiry limits. Do not assume a service will stay available without renewing it for the review period.
 
 1. Create the public GitHub/GitLab repository and push the milestone history.
 2. Run `python scripts/package_deployment.py`. It installs locked frontend dependencies, builds the UI and creates `deployment-bundle.zip` from tracked sources plus built assets. The zip is ignored by Git.
@@ -103,7 +110,7 @@ PythonAnywhere is the prepared free-account path. Its ASGI feature is experiment
    .venv/bin/python -m pip install -r backend/requirements.txt
    .venv/bin/python -m backend.seed
    ```
-5. Generate a provider API token in the dashboard. In a trusted shell with this repository, set the three `PYTHONANYWHERE_*` variables. Run `python scripts/deploy_pythonanywhere.py` only when ready to create the public app. `deploy/pythonanywhere.json` supplies the registration template.
+5. The participant generated an API token in the provider dashboard and installed the `pythonanywhere` CLI in the app virtual environment. The actual registration command and account-specific paths are in [docs/pythonanywhere-Vishwak.md](docs/pythonanywhere-Vishwak.md). The separate `scripts/deploy_pythonanywhere.py` API route and `deploy/pythonanywhere.json` are provided as alternatives; they were not used for this deployment.
 6. The provider runs `scripts/pythonanywhere-start.sh`; it migrates/seeds idempotently, enables built static assets, and starts Uvicorn on the provider socket. The reviewer clock remains disabled unless explicitly enabled in that environment.
 7. Check HTTPS `/`, `/health`, `/docs`, delivery preview/save, history, finalise/pay and ledger. Fill section 2 with the actual URLs and confirm provider renewal dates.
 8. To redeploy, build/upload/extract the new package without replacing `data/` or `.venv/`, then run `python scripts/deploy_pythonanywhere.py --reload`. To seed again, run `.venv/bin/python -m backend.seed`; existing data is retained.
@@ -227,8 +234,8 @@ Use `docs/reviewer-checklist.md` to verify all PDF edge cases. Re-seed instructi
 
 ## 11. Known limitations
 
-- Hosted URLs are still pending. M5 hosting, hosted edge-case review, final documentation sign-off and the `v1.0` tag remain pending.
-- Provider ASGI configuration is prepared from official documentation but has not been exercised on an account. Docker is not available in the development environment, so container startup has not been verified.
+- The app is hosted, and read-only hosted boundary checks pass. Personal hosted workflow review, final documentation sign-off and the `v1.0` tag remain pending.
+- PythonAnywhere startup and public responses are verified. Hosted restart persistence, provider log access and review-period renewal still need account-side checks. Docker is not available in the development environment, so container startup has not been verified.
 - Authentication, multi-centre support, printable PDF statements and quality bonuses are omitted. All mandatory calculation flows are prioritised.
 - SQLite is appropriate for one small buying centre; it serialises writes and does not support horizontally distributed writers. There is no automatic backup/restore workflow.
 - No idempotency keys for delivery/advance/note creation. Do not blindly retry an uncertain write; check the ledger first.

@@ -2,7 +2,7 @@
 
 Account dashboard: https://www.pythonanywhere.com/user/Vishwak/
 
-These steps have not yet been run on the account.
+The participant ran these steps on 2026-10-21. Public read-only smoke checks passed on 2026-10-22; see verification.md.
 
 1. Open Files and upload deployment-bundle.zip into /home/Vishwak/.
 2. Open Account > API token and create a token if none exists. Keep it on PythonAnywhere; the pa command can discover it inside your account's console.
@@ -21,7 +21,7 @@ python3.12 -m venv .venv
 
 If a command fails, stop and share its error output (without credentials). If python3.12 is unavailable, share that message before choosing another interpreter.
 
-Expected public URLs, only after successful creation:
+Verified public URLs:
 - https://vishwak.pythonanywhere.com/
 - https://vishwak.pythonanywhere.com/health
 - https://vishwak.pythonanywhere.com/docs
@@ -36,4 +36,4 @@ Official references:
 - https://help.pythonanywhere.com/pages/ASGICommandLine/
 - https://help.pythonanywhere.com/pages/GettingYourAPIToken/
 
-Public deployment, account compatibility and review-period availability remain unverified until the account-side commands succeed.
+Public deployment and account compatibility are verified. Review-period availability, renewal and persistence across restart still require account-side checks.
